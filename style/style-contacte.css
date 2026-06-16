@@ -345,3 +345,31 @@ footer {
 .fb:hover {
     color: var(--color-primary);
 }
+
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+button:disabled {
+
+    background: #86BD04;
+
+    cursor: default;
+
+    opacity: 1;
+}
+
+html {
+    scroll-behavior: smooth;
+}

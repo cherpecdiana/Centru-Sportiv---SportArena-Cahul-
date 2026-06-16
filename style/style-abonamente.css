@@ -467,3 +467,49 @@ footer {
 .fb:hover {
     color: var(--color-primary);
 }
+
+
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card {
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.04);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.2);
+}
+
+button,
+.btn {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+button:hover,
+.btn:hover {
+    transform: scale(1.05);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.2);
+}
+
+html {
+    scroll-behavior: smooth;
+}
