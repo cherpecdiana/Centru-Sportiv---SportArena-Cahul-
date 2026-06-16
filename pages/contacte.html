@@ -77,24 +77,22 @@
             </div>
 
             <div class="contact-form">
+                <form action="https://api.sheetmonkey.io/form/2jXoLPzgWcsx6oMCMyKdtb" method="post">
 
-                <form action="https://httpbin.org/post" method="post">
-
-                    <input type="text" placeholder="Nume complet">
+                    <input type="text" name="name" placeholder="Nume complet" required>
 
                     <div class="input-row">
-                        <input type="tel" placeholder="Telefon">
-                        <input type="email" placeholder="E-mail">
+                        <input type="tel" name="phone" placeholder="Telefon">
+                        <input type="email" name="email" placeholder="E-mail" required>
                     </div>
 
-                    <textarea rows="6" placeholder="Mesajul tău..."></textarea>
+                    <textarea name="message" rows="6" placeholder="Mesajul tău..." required></textarea>
 
                     <button type="submit">
                         Trimite mesajul
                     </button>
 
                 </form>
-
             </div>
 
         </section>
