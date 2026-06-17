@@ -1,0 +1,567 @@
+/* верхушка */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --color-primary: #D9FF3F;
+    --color-secondary: white;
+    --font-main: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    font-variant-ligatures: no-contextual;
+    font-feature-settings: "calt" 0, "clig" 0;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #171717;
+}
+
+header {
+    background-color: #1A1A1A;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+
+    padding: 20px 50px;
+}
+
+.logo {
+    justify-self: start;
+}
+
+.logo img {
+    display: block;
+    height: 38px;
+    width: auto;
+}
+
+.menu {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    justify-self: center;
+}
+
+.menu-toggle-checkbox {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    width: 44px;
+    height: 44px;
+
+    justify-self: end;
+
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 26px;
+    height: 2px;
+
+    background: white;
+    border-radius: 2px;
+
+    transition: 0.3s;
+}
+
+.menu-cta-mobile {
+    display: none;
+}
+
+.button-container {
+    background-color: #86BD04;
+    padding: 10px 20px;
+    border-radius: 20px;
+    justify-self: end;
+
+    transition: 0.3s;
+}
+
+.button-container:hover {
+    background-color: #74A400;
+}
+
+.btn {
+    justify-self: end;
+    text-decoration: none;
+    color: white;
+    font-family: var(--font-main);
+    font-weight: 400;
+    font-size: 19px;
+}
+
+.menu a.btn-orar {
+    color: #86BD04;
+    text-decoration: underline;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--color-secondary);
+    font-family: var(--font-main);
+    font-weight: 400;
+    font-size: 20px;
+
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: var(--color-primary);
+}
+
+/* таблица */
+
+
+#orar-header {
+    margin-top: 32px;
+    margin-bottom: 32px;
+
+    text-align: center;
+}
+
+#orar-header h1 {
+    margin: 0;
+
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+}
+
+
+
+#orar {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 72px;
+}
+
+.orar-scroll {
+    max-width: 100%;
+}
+
+.orar-hint {
+    display: none;
+}
+
+#orar table {
+    width: 1076px;
+
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 10px;
+
+    border-collapse: separate;
+    border-spacing: 0;
+
+    overflow: hidden;
+
+    background: transparent;
+}
+
+#orar table {
+    width: 1077px;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid #3A3A3A;
+    border-radius: 10px;
+    overflow: hidden;
+
+    background: #111111;
+}
+
+
+#orar thead th {
+    height: 59px;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    color: #fff;
+
+    border-bottom: 1px solid rgba(255,255,255,.15);
+}
+#orar thead tr {
+    background: #1A1A1A;
+}
+
+#orar tbody tr {
+    background: #111111;
+}
+
+#orar th,
+#orar td {
+    border-bottom: 1px solid #2A2A2A;
+}
+
+#orar tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+
+#orar th,
+#orar td {
+    padding: 0 45px;
+
+    font-size: 20px;
+    font-weight: 500;
+
+    color: #fff;
+
+    text-align: center;
+}
+
+
+
+#orar th:first-child,
+#orar td:first-child {
+    text-align: left;
+}
+
+
+
+#orar tbody tr {
+    height: 60px;
+}
+
+#orar tbody tr:not(:last-child) td {
+    border-bottom: 1px solid rgba(255,255,255,.12);
+}
+
+#orar th,
+#orar td {
+    height: 80px;
+}
+
+/* подвал */
+
+footer h3 {
+    color: white;
+
+    text-align: center;
+
+    font-size: 34px;
+
+    margin-bottom: 15px;
+}
+
+footer p {
+    color: #d8d8d8;
+
+    text-align: center;
+
+    font-size: 17px;
+
+    margin: 5px 0;
+}
+
+footer img {
+    display: block;
+}
+
+footer div:last-child {
+    display: flex;
+
+    gap: 20px;
+
+    align-items: center;
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 70px;
+    right: 70px;
+    height: 1px;
+    background: #474747;
+}
+
+.footer-contact {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+footer {
+    background: #171717;
+    position: relative;
+
+    border-top: 1px solid #474747;
+
+
+    justify-content: space-between;
+    align-items: center;
+
+    min-height: 100px;
+    padding: 35px 70px;
+
+    border-top: none;
+
+    display: flex;
+
+    height: 170px;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 55px;
+
+    margin-top: 20px;
+}
+
+.inst,
+.fb {
+    color: white;
+    transition: color 0.3s;
+}
+
+.inst:hover,
+.fb:hover {
+    color: var(--color-primary);
+}
+
+/* ===================== МОБИЛЬНАЯ АДАПТАЦИЯ ===================== */
+
+@media (max-width: 768px) {
+
+    /* навигация */
+
+    .navbar {
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+
+        padding: 16px 20px;
+    }
+
+    .logo img {
+        height: 30px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .button-container {
+        display: none;
+    }
+
+    .menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+
+        grid-column: 1 / -1;
+
+        width: 100%;
+
+        flex-direction: column;
+        gap: 0;
+
+        background-color: #1A1A1A;
+        border-top: 1px solid #2A2A2A;
+
+        max-height: 0;
+        overflow: hidden;
+
+        transition: max-height 0.35s ease;
+    }
+
+    .menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu a {
+        display: block;
+        padding: 16px 20px;
+
+        font-size: 18px;
+    }
+
+    .menu-cta-mobile {
+        display: list-item;
+
+        padding: 16px 20px 20px;
+    }
+
+    .menu-cta-mobile .btn {
+        display: block;
+
+        width: 100%;
+
+        padding: 12px 0;
+
+        text-align: center;
+
+        background-color: #86BD04;
+        border-radius: 20px;
+    }
+
+    .menu-toggle-checkbox:checked ~ .navbar .menu {
+        max-height: 420px;
+    }
+
+    .hamburger {
+        position: relative;
+        z-index: 1001;
+    }
+
+    .menu-toggle-checkbox:checked ~ .navbar .hamburger span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .menu-toggle-checkbox:checked ~ .navbar .hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle-checkbox:checked ~ .navbar .hamburger span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* заголовок */
+
+    #orar-header {
+        margin-top: 24px;
+        margin-bottom: 24px;
+
+        padding: 0 24px;
+    }
+
+    #orar-header h1 {
+        font-size: 26px;
+    }
+
+    /* таблица */
+
+    #orar {
+        justify-content: flex-start;
+
+        flex-direction: column;
+
+        margin-bottom: 48px;
+
+        padding: 0 24px;
+    }
+
+    .orar-hint {
+        display: block;
+
+        margin-bottom: 12px;
+
+        color: rgba(255,255,255,.5);
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+    .orar-scroll {
+        width: 100%;
+        max-width: 100%;
+
+        overflow-x: auto;
+
+        -webkit-overflow-scrolling: touch;
+
+        border-radius: 10px;
+    }
+
+    #orar table {
+        width: 720px;
+    }
+
+    #orar th,
+    #orar td {
+        padding: 0 24px;
+
+        font-size: 16px;
+
+        height: 64px;
+    }
+
+    #orar thead th {
+        height: 50px;
+
+        font-size: 16px;
+    }
+
+    /* подвал */
+
+    footer {
+        flex-direction: column;
+
+        gap: 24px;
+
+        padding: 30px 24px;
+
+        height: auto;
+        min-height: auto;
+    }
+
+    .footer-contact {
+        position: static;
+        top: auto;
+        transform: none;
+    }
+
+    footer::before {
+        display: none;
+    }
+
+    .footer-info {
+        gap: 24px;
+
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+
+    #orar-header h1 {
+        font-size: 22px;
+    }
+
+    #orar table {
+        width: 600px;
+    }
+
+    #orar th,
+    #orar td {
+        padding: 0 16px;
+
+        font-size: 14px;
+
+        height: 56px;
+    }
+}
+
+ 

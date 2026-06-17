@@ -1,0 +1,692 @@
+/* верхушка */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --color-primary: #D9FF3F;
+    --color-secondary: white;
+    --font-main: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    font-variant-ligatures: no-contextual;
+    font-feature-settings: "calt" 0, "clig" 0;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #171717;
+}
+
+header {
+    background-color: #1A1A1A;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+
+    padding: 20px 50px;
+}
+
+.logo {
+    justify-self: start;
+}
+
+.logo img {
+    display: block;
+    height: 38px;
+    width: auto;
+}
+
+.menu {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    justify-self: center;
+}
+
+.menu-toggle-checkbox {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    width: 44px;
+    height: 44px;
+
+    justify-self: end;
+
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 26px;
+    height: 2px;
+
+    background: white;
+    border-radius: 2px;
+
+    transition: 0.3s;
+}
+
+.menu-cta-mobile {
+    display: none;
+}
+
+.button-container {
+    background-color: #86BD04;
+    padding: 10px 20px;
+    border-radius: 20px;
+    justify-self: end;
+
+    transition: 0.3s;
+}
+
+.button-container:hover {
+    background-color: #74A400;
+}
+
+.btn {
+    justify-self: end;
+    text-decoration: none;
+    color: white;
+    font-family: var(--font-main);
+    font-weight: 400;
+    font-size: 19px;
+}
+
+.menu a.btn-abonamente {
+    color: #86BD04;
+    text-decoration: underline;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--color-secondary);
+    font-family: var(--font-main);
+    font-weight: 400;
+    font-size: 20px;
+
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: var(--color-primary);
+}
+
+/* заголовок */
+
+#abonamente-header {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 35px;
+}
+
+#abonamente-header h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+#abonamente-header p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #d8d8d8;
+}
+
+
+#abonamente {
+    width: 1180px;
+    margin: 0 auto 70px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 38px 95px;
+}
+
+/* карточки */
+
+.card {
+    width: 330px;
+    height: 350px;
+
+    background: #000;
+    border: 1px solid #fff;
+    border-radius: 12px;
+
+    box-shadow: 0 0 40px rgba(255,255,255,.35);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+
+    padding-top: 28px;
+}
+
+.card.green {
+    border: 1px solid #A6E400;
+    box-shadow: 0 0 40px rgba(166,228,0,.5);
+}
+
+.card h2 {
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+
+    margin: 0;
+}
+
+.card h3 {
+    color: #A6E400;
+    font-size: 38px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.card hr {
+    width: 242px;
+    border: none;
+    border-top: 1px solid #5a5a5a;
+}
+
+.card ul {
+    width: 100%;
+    padding-left: 60px;
+
+    list-style: disc;
+
+    color: white;
+    font-size: 18px;
+
+    line-height: 38px;
+
+    margin: 0;
+}
+
+.card button {
+    width: 95px;
+    height: 43px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #86BD04;
+
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.card button:hover {
+    background-color:#74A400;
+}
+
+.btn4 {
+    position: relative;
+    top: -8px;
+}
+
+.btn5 {
+    position: relative;
+    top: 0px;
+}
+
+.card a {
+    margin-top: auto;
+    margin-bottom: 28px;
+}
+
+.card.normal h2 {
+    margin-bottom: 4px;
+}
+
+.card.normal h3 {
+    margin-bottom: 27px;
+}
+
+.card.normal hr {
+    margin-bottom: 15px;
+}
+
+.card.normal ul {
+    margin-bottom: 17px;
+}
+
+.old-price {
+    font-size: 11px;
+    font-weight: 700;
+    color: #9d9d9d;
+    text-decoration: line-through;
+
+    margin-left: 6px;
+}
+
+.price-row {
+    display: flex;
+    align-items: flex-end;
+    gap: 6px;
+}
+
+.discount {
+    color: #A6E400;
+    font-size: 15px;
+    font-weight: 700;
+
+    margin-left: 6px;
+}
+
+.small-title {
+    display: block;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    margin-top: 0;
+}
+
+.small-title .discount {
+    margin-left: -3px;
+    letter-spacing: -0.31px;
+}
+
+.card.two h2 {
+    margin-bottom: 0;
+}
+
+.card.two .small-title {
+    margin-top: 0;
+}
+
+.card.two .price-row {
+    margin-top: 7px;
+    margin-bottom: 9px;
+}
+
+.card.two hr {
+    margin-bottom: 15px;
+}
+
+.card.two ul {
+    margin-bottom: 17px;
+}
+
+.subtitle {
+    color: #A6E400;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.card.special h2 {
+    margin-bottom: 0;
+}
+
+.card.special .subtitle {
+    margin-bottom: 5px;
+}
+
+.card.special h3 {
+    margin-bottom: 13px;
+}
+
+.card.special hr {
+    margin-bottom: 15px;
+}
+
+.card.special ul {
+    margin-bottom: 17px;
+}
+
+.recommended {
+    position: absolute;
+    top: -11px;
+
+    background: #A6E400;
+    color: #000;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    padding: 3px 14px;
+    border-radius: 20px;
+}
+
+.discount-inline {
+    color: #A6E400;
+    font-size: 15px;
+    font-weight: 700;
+    margin-left: 4px;
+}
+
+.price-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 8px;
+}
+
+.old-price {
+    font-size: 14px;
+    font-weight: 500;
+    color: #9A9A9A;
+    text-decoration: line-through;
+}
+
+.small-title {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.discount {
+    color: #A6E400;
+    font-size: 15px;
+    font-weight: 700;
+    margin-left: -3px;
+}
+
+/* подвал */
+
+footer h3 {
+    color: white;
+
+    text-align: center;
+
+    font-size: 34px;
+
+    margin-bottom: 15px;
+}
+
+footer p {
+    color: #d8d8d8;
+
+    text-align: center;
+
+    font-size: 17px;
+
+    margin: 5px 0;
+}
+
+footer img {
+    display: block;
+}
+
+footer div:last-child {
+    display: flex;
+
+    gap: 20px;
+
+    align-items: center;
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 70px;
+    right: 70px;
+    height: 1px;
+    background: #474747;
+}
+
+.footer-contact {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+footer {
+    background: #171717;
+    position: relative;
+
+    border-top: 1px solid #474747;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 30px 100px;
+    padding: 30px 70px;
+
+    min-height: 170px;
+    padding: 35px 70px;
+
+    border-top: none;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 55px;
+
+    margin-top: 20px 0;
+}
+
+.inst,
+.fb {
+    color: white;
+    transition: color 0.3s;
+}
+
+.inst:hover,
+.fb:hover {
+    color: var(--color-primary);
+}
+
+/* ===================== МОБИЛЬНАЯ АДАПТАЦИЯ ===================== */
+
+@media (max-width: 768px) {
+
+    /* навигация */
+
+    .navbar {
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+
+        padding: 16px 20px;
+    }
+
+    .logo img {
+        height: 30px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .button-container {
+        display: none;
+    }
+
+    .menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+
+        grid-column: 1 / -1;
+
+        width: 100%;
+
+        flex-direction: column;
+        gap: 0;
+
+        background-color: #1A1A1A;
+        border-top: 1px solid #2A2A2A;
+
+        max-height: 0;
+        overflow: hidden;
+
+        transition: max-height 0.35s ease;
+    }
+
+    .menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu a {
+        display: block;
+        padding: 16px 20px;
+
+        font-size: 18px;
+    }
+
+    .menu-cta-mobile {
+        display: list-item;
+
+        padding: 16px 20px 20px;
+    }
+
+    .menu-cta-mobile .btn {
+        display: block;
+
+        width: 100%;
+
+        padding: 12px 0;
+
+        text-align: center;
+
+        background-color: #86BD04;
+        border-radius: 20px;
+    }
+
+    .menu-toggle-checkbox:checked ~ .navbar .menu {
+        max-height: 420px;
+    }
+
+    .hamburger {
+        position: relative;
+        z-index: 1001;
+    }
+
+    .menu-toggle-checkbox:checked ~ .navbar .hamburger span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .menu-toggle-checkbox:checked ~ .navbar .hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle-checkbox:checked ~ .navbar .hamburger span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* заголовок */
+
+    #abonamente-header {
+        margin-top: 28px;
+        margin-bottom: 28px;
+
+        padding: 0 24px;
+    }
+
+    #abonamente-header h1 {
+        font-size: 28px;
+    }
+
+    /* карточки тарифов */
+
+    #abonamente {
+        width: 100%;
+
+        padding: 0 24px;
+
+        gap: 24px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 360px;
+        height: auto;
+
+        padding-bottom: 28px;
+    }
+
+    .card hr {
+        width: 85%;
+        max-width: 280px;
+    }
+
+    .card ul {
+        padding-left: 48px;
+    }
+
+    /* подвал */
+
+    footer {
+        flex-direction: column;
+
+        gap: 24px;
+
+        padding: 30px 24px;
+
+        min-height: auto;
+    }
+
+    .footer-contact {
+        position: static;
+        transform: none;
+    }
+
+    footer::before {
+        display: none;
+    }
+
+    .footer-info {
+        gap: 24px;
+
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+
+    #abonamente-header h1 {
+        font-size: 24px;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+
+    .card ul {
+        font-size: 16px;
+        padding-left: 40px;
+    }
+}
